@@ -10,8 +10,8 @@ class EmailParser
   end
 
   def parse
-    email.split.each do |email|
+    email.split.map do |email|
       email.split(',')
-    end.flatten.uniq
+    end.flatten.zip
   end
 end
